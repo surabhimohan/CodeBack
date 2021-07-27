@@ -1,0 +1,29 @@
+package test;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+public class ObjectExample 
+{
+	public static final String filepath="D:\\JAVA\\Chester\\obj";
+	public static void main(String[] args) 
+	{		
+		ObjectExample oe=new ObjectExample();
+		Student st=new Student("John","Frost",22);
+		oe.WriteObjectToFile(st);
+	}
+	public void WriteObjectToFile(Object serObj)
+	{
+		try
+		{
+			FileOutputStream fileOut=new FileOutputStream(filepath);
+			ObjectOutputStream objectOut=new ObjectOutputStream(fileOut);
+			objectOut.writeObject(serObj);
+			objectOut.close();
+			System.out.println("The Object was successfully written to a file");
+		}
+		catch(Exception e)
+		{
+			e.printStackTrace();
+		}
+	}
+}

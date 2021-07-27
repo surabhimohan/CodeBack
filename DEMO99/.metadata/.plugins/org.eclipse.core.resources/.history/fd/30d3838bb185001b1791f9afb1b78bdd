@@ -1,0 +1,47 @@
+package test;
+import java.util.*;
+public class Main {
+	public static void main(String[] args) 
+	{
+		try(Scanner s=new Scanner(System.in);)
+		{
+			boolean k=true;
+			while(k)
+			{
+			System.out.println("MENU:");
+			System.out.println("1.Add a new contact");
+			System.out.println("2.Search a contact");
+			System.out.println("3.Edit a contact");
+			System.out.println("4.List all contacts");
+			System.out.println("5.Delete a contact");
+			System.out.print("enter choice:");
+			int choice=Integer.parseInt(s.nextLine());
+			switch(choice)
+			{
+			case 1:
+				System.out.println("--You opted to add a new contact-- ");
+				break;
+			case 2:
+				System.out.println("--You opted to search a contact-- ");
+				break;
+			case 3:
+				System.out.println("--You opted to edit a contact-- ");
+				break;
+			case 4:
+				System.out.println("--You opted to list all contacts-- ");
+				break;
+			case 5:
+				System.out.println("-You opted to delete a contact-- ");
+				break;
+			case 6:
+				k=false;
+				System.out.println("__Invalid choice__!!");
+				break;	
+			}
+			}
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,24 @@
+package test;
+import java.util.*;
+public class StringR 
+{
+	public static String rev(String str)
+	{
+		char ch[]=str.toCharArray();
+		String s1="";
+		for(int i=ch.length-1;i>=0;i--)
+		{
+			s1+=ch[i];
+		}
+		return s1;
+	}
+	public static void main(String[] args) 
+	{
+		Scanner s=new Scanner(System.in);
+		System.out.println("enter the string:");
+		String s1=s.next();
+		System.out.println(rev(s1));
+		s.close();
+	}
+
+}

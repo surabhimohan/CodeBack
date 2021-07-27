@@ -1,0 +1,22 @@
+public class Main {
+
+	public static void main(String[] args) {
+		//java.util.Scanner s=new java.util.Scanner(System.in);
+		int n,m;
+		try{
+		 n=System.in.read();
+		 m=System.in.read();
+		for(int i=0;i<=10;i++)
+		{
+			System.out.print(n+" ");
+			int sum=n+m;
+			n=m;
+			m=sum;
+		}
+		}
+		catch(Exception e)
+		{
+		}
+	}
+
+}

@@ -1,0 +1,30 @@
+package test;
+import java.util.*;
+public class Program
+{
+	public static void main(String args[]) 
+	{
+		try(Scanner s=new Scanner(System.in);)
+		{
+			System.out.println("student details:");
+			String name=s.nextLine();
+			String nName=s.nextLine();
+			String city=s.nextLine();
+			String email=s.nextLine();
+			int id=Integer.parseInt(s.nextLine());
+			String number=s.nextLine();
+			if(s.hasNext("[A-Za-z]"))
+			{
+			System.out.print("name "+name);
+			System.out.print("nName "+nName);
+			System.out.print("city "+city);
+			System.out.print("email "+email);
+			}
+			int n=5;
+			int m=10;
+			if(id<=n && number.length()==m)
+			else
+				System.out.println("invalid");
+		}
+	}
+}

@@ -1,0 +1,42 @@
+package test;
+import java.util.*;
+public class Main {
+	public static void main(String[] args) 
+	{
+		try(Scanner s=new Scanner(System.in);)
+		{
+			boolean k=true;
+			while(k)
+			{
+			System.out.println("menu");
+			System.out.println("1.coffee");
+			System.out.println("2.tea");
+			System.out.println("3.juice");
+			System.out.println("4.cold drink");
+			System.out.print("enter choice:");
+			int choice=Integer.parseInt(s.nextLine();
+			switch(choice)
+			{
+			case 1:
+				System.out.println("you opted for adding new contact");
+				break;
+			case 2:
+				System.out.println("you opted to search a contact");
+				break;
+			case 3:
+				System.out.println("you opted edit a contact");
+				break;
+			case 4:
+				System.out.println("you opted delete a contact");
+				break;
+			}
+			choice++;
+			}
+			System.out.println("invalid");
+				
+		}
+		
+		
+	}
+
+}

@@ -1,0 +1,105 @@
+package test;
+import java.util.Scanner;
+public class Main {
+	public static void main(String[] args) 
+	{
+		try(Scanner s=new Scanner(System.in);)
+		{
+			boolean k=true;
+			while(k)
+			{
+				int choice=getUserInput(s);
+			switch(choice)
+			{
+			case 1:
+				System.out.println("--You opted to add a new contact-- ");
+				addContact(s);
+				System.out.println("below is the new updated list:");
+				Contacts.listContacts();
+				break;
+			case 2:
+				System.out.println("--You opted to search a contact-- ");
+				searchContact(s);
+				break;
+			case 3:
+				System.out.println("--You opted to edit a contact-- ");
+				Contacts.listContacts();
+				editContact(s);
+				Contacts.listContacts();
+				break;
+			case 4:
+				System.out.println("--You opted to list all contacts-- ");
+				Contacts.listContacts();
+				break;
+			case 5:
+				System.out.println("-You opted to delete a contact-- ");
+				Contacts.listContacts();
+				deleteContact(s);
+				Contacts.listContacts();
+				break;
+			case 6:
+				k=false;
+				System.out.println("You have opted to exit the application.Thank You!!");
+				break;	
+			}
+			}
+		}
+		
+	}
+	static int getUserInput(Scanner scanObj)
+	{
+		System.out.println("\nMENU:");
+		System.out.println("1.Add a new contact");
+		System.out.println("2.Search a contact");
+		System.out.println("3.Edit a contact");
+		System.out.println("4.List all contacts");
+		System.out.println("5.Delete a contact");
+		System.out.println("6.Exit application");
+		System.out.print("enter choice: ");
+		int choice=Integer.parseInt(scanObj.nextLine());
+		return choice;
+	}
+	static void addContact(Scanner scanObj)
+	{
+		System.out.println("enter contact details: ");
+		Contacts ct=new Contacts();
+		System.out.print("name: ");
+		ct.setName(scanObj.nextLine());
+		System.out.print("nickName: ");
+		ct.setNickName(scanObj.nextLine());
+		System.out.print("city: ");
+		ct.setCity(scanObj.nextLine());
+		System.out.print("email: ");
+		ct.setEmail(scanObj.nextLine());
+		System.out.print("Number: ");
+		ct.setPhNumber(scanObj.nextLine());
+		/*System.out.print("datetime: ");
+		ct.setDatetime(scObj.nextLine());*/
+		System.out.print("type(PERSONAL/BUSINESS): ");
+		String type=scanObj.nextLine();
+		if(type.equalsIgnoreCase("business"))
+			ct.setType(Type.BUSINESS);
+		else
+			ct.setType(Type.PERSONAL);
+		
+		ct.insert();
+	}
+	static void searchContact(Scanner scanObj)
+	{
+		System.out.print("Please enter name or number you want to search:");
+		String searchKey=scanObj.nextLine();
+		Contacts.search(searchKey);
+	}
+	static void editContact(Scanner scanObj)
+	{
+		
+	}
+	static void deleteContact(Scanner scanObj)
+	{
+		System.out.println("Please enter the row you want to delete:");
+		int deleteKey=scanObj.nextInt(); 
+		Contacts.delete(deleteKey);
+	}
+	
+	
+}

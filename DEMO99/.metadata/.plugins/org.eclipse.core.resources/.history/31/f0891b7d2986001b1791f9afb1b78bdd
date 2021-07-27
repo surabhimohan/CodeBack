@@ -1,0 +1,51 @@
+package test;
+import java.util.*;
+public class Program 
+{
+	String name,nickName,city,email;
+	int id,number;
+		
+	public Program()
+	{
+		this(" "," "," "," ",0,0);
+	}
+	public Program(String sName, String sNickName, String sCity,
+			String sEmail, int sId, int sNumber) 
+	{
+		name=sName;
+		nickName=sNickName;
+		city=sCity;
+		email=sEmail;
+		id=sId;
+		number=sNumber;
+	}
+	public static void main(String[] args)
+	{
+		try(Scanner s=new Scanner(System.in);)		
+		{
+			System.out.print("name: ");
+			name=s.nextLine();
+			System.out.print("nickname: ");
+			String nickName=s.next();
+			System.out.print("email: ");
+			String email=s.next();
+			System.out.print("city: ");
+			String city=s.next();
+			System.out.print("Student Details:");
+			if(s.hasNext("[A-Z a-z]*"))
+					{
+				//String name=s.next();
+				//String nickName=s.nextLine();
+				//String email=s.nextLine();
+				//String city=s.nextLine();
+					System.out.println("Student's Name: "+name);
+					System.out.println("Sudent's NickName: "+nickName);
+					System.out.println("Student's email: "+email);
+					System.out.println("Student's City: "+city);
+					}
+			else
+				System.out.println("invalid input");
+		}
+	}
+
+}

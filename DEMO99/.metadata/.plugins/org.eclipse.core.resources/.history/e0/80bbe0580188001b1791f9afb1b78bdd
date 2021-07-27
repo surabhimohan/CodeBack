@@ -1,0 +1,74 @@
+package test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class ContactsDB 
+{
+	Connection c=null;
+	Statement st=null;
+	ContactsDB()
+	{
+		try
+		{
+			Class.forName("org.sqlite.JDBC");
+			c=DriverManager.getConnection("jdbc:sqlite:ContactsDB.db");
+			System.out.println("connected to database!");
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error: "+e.getMessage());
+		}
+	}
+	public void listContacts()
+	{
+		try
+		{
+			this.st=c.createStatement();
+			ResultSet rs=st.executeQuery("SELECT * FROM ContactDetails");
+			
+			while(rs.next())
+			{
+				//int id=rs.getInt("id");
+				String name=rs.getString("name");
+				String nickName=rs.getString("nickName");
+				String city=rs.getString("city");
+				String email=rs.getString("email");
+				String phNumber=rs.getString("phNumber");
+				String datetime=rs.getString("datetime");
+				String type=rs.getString("nickName");
+				System.out.println(name+" "+nickName+" "+city+" "+email+" "+
+				phNumber+" "+datetime+" "+type);
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error: "+e.getMessage());
+		}
+	}
+	public void CloseConnection()
+	{
+		try
+		{
+			c.close();
+		}
+		catch(Exception e)
+		{
+			//error
+		}
+	}
+	public void executeQuery(String query)
+	{
+		try
+		{
+			this.st=c.createStatement();
+			st.executeQuery(query);
+		}
+		catch(Exception e)
+		{
+			//error
+		}
+	}
+}

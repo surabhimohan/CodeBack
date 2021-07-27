@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;test.Lowest&apos; to &apos;Smallest&apos;&#x0D;&#x0A;- Original project: &apos;Greatest_Smallest_no&apos;&#x0D;&#x0A;- Original element: &apos;test.Lowest&apos;&#x0D;&#x0A;- Renamed element: &apos;test.Smallest&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Lowest&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;test{Lowest.java[Lowest" matchStrategy="1" name="Smallest" qualified="false" references="true" similarDeclarations="false" stamp="1590156231561" textual="false" version="1.0"/>
+</session>

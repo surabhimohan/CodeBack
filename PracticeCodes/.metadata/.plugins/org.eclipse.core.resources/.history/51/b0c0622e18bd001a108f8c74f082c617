@@ -1,0 +1,10 @@
+public class Main {
+
+	public static void main(String[] args) {
+		String str="subbu";
+		java.util.Scanner s=new java.util.Scanner(str);
+		System.out.println(s);
+		s.close();
+	}
+
+}

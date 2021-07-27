@@ -1,0 +1,11 @@
+package test;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
+
+public class ObjectExample 
+{
+	public static void main(String[] args) 
+	{		
+		
+	}
+}

@@ -1,0 +1,16 @@
+package test;
+
+public class Main {
+
+	public static void main(String[] args) {
+		//boolean run=true;
+		System.out.println("Menu:");
+		while(int n>1){
+			System.out.println("Menu:");
+			System.out.println("1.Add a new contact:");
+			System.out.println("2.Search a contact:");
+			System.out.println("choose from menu:");
+		}
+	}
+
+}

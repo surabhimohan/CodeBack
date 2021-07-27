@@ -1,0 +1,16 @@
+package test;
+import java.util.*;
+public class Program
+{
+	public static void main() 
+	{
+		try(Scanner s=new Scanner(System.in);)
+		{
+			System.out.println("enter details:");
+			System.out.println("name");
+			System.out.println("nName");
+			System.out.println("city");
+			System.out.println("email");
+		}
+	}
+}

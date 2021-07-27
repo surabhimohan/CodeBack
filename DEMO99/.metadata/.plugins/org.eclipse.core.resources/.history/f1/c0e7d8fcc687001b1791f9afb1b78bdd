@@ -1,0 +1,39 @@
+package test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class SqliteDB 
+{
+	Connection c=null;
+	Statement stmt=null;
+	
+	SqliteDB()
+	{
+		try
+		{
+			Class.forName("org.sqlite.JDBC");
+			c=DriverManager.getConnection("jdbc:sqlite:CollegeDB.sqlite");
+			System.out.println("conected to DB");
+			c.close();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error: "+e.getMessage());
+		}
+	}
+	public void listStudents()
+	{
+		try
+		{
+			this.stmt=c.createStatement();
+			ResultSet rs=stmt.executeQuery("SELECT * FROM Sudents");
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error: "+e.getMessage());
+		}
+	}
+}

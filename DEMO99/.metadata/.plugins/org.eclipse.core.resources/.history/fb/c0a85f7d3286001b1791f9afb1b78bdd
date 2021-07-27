@@ -1,0 +1,20 @@
+package test;
+import java.util.*;
+public class Program
+{
+	public static void main(String args[]) 
+	{
+		try(Scanner s=new Scanner(System.in);)
+		{
+			System.out.println("student details:");
+			System.out.print("name "+s.nextLine());
+			System.out.print("nName "+s.nextLine());
+			System.out.print("city "+s.nextLine());
+			System.out.print("email "+s.nextLine());
+			System.out.print("id "+s.nextInt());
+			System.out.print("number "+s.nextInt());
+			
+			
+		}
+	}
+}

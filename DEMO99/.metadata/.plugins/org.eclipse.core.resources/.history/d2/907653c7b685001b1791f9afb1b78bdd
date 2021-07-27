@@ -1,0 +1,23 @@
+package test;
+import java.util.*;
+public class Program 
+{
+	//String name,nickName,city,email;
+	//int id,number;
+		
+	public static void main(String[] args)
+	{
+		try(Scanner s=new Scanner(System.in);)		
+		{
+			System.out.println("enter name:");
+			if(s.hasNext("[A-Z a-z]*"))
+					{
+					String name=s.next();
+					System.out.println(name);
+					}
+			else
+				System.out.println("");
+		}
+	}
+
+}

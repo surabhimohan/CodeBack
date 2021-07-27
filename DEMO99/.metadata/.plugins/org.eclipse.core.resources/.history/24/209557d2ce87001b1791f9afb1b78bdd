@@ -1,0 +1,71 @@
+package test;
+
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.ResultSet;
+import java.sql.Statement;
+
+public class SqliteDB 
+{
+	Connection c=null;
+	Statement stmt=null;
+	
+	SqliteDB()
+	{
+		try
+		{
+			Class.forName("org.sqlite.JDBC");
+			c=DriverManager.getConnection("jdbc:sqlite:CollegeDB.sqlite");
+			System.out.println("conected to DB");
+			//c.close();
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error: "+e.getMessage());
+		}
+	}
+	public void listStudents()
+	{
+		try
+		{
+			this.stmt=c.createStatement();
+			ResultSet rs=stmt.executeQuery("SELECT * FROM Students");
+			
+			while(rs.next())
+			{
+				int id=rs.getInt("id");
+				String firstname=rs.getString("firstname");
+				String lastname=rs.getString("lastname");
+				int age=rs.getInt("age");
+				System.out.println(id+" "+firstname+" "+lastname+" "+age);
+			}
+		}
+		catch(Exception e)
+		{
+			System.out.println("Error: "+e.getMessage());
+		}
+	}
+	public void CloseConnection()
+	{
+		try
+		{
+			c.close();
+		}
+		catch(Exception e)
+		{
+			//error
+		}
+	}
+	public void executeQuery(String query)
+	{
+		try
+		{
+			this.stmt=c.createStatement();
+			stmt.executeQuery(query);
+		}
+		catch(Exception e)
+		{
+			//error
+		}
+	}
+}

@@ -1,0 +1,29 @@
+package test;
+import java.util.*;
+public class Program
+{
+	public static void main(String args[]) 
+	{
+		try(Scanner s=new Scanner(System.in);)
+		{
+			System.out.println("enter no. of students:");
+			int n=Integer.parseInt(s.next());
+			System.out.print("name ");
+			System.out.print("nName ");
+			System.out.print("city ");
+			System.out.print("email ");
+			System.out.print("id ");
+			System.out.print("number");
+			
+			for(int i=1;i<=n;i++)
+			{
+				String name=s.next();
+				String nName=s.next();
+				String city=s.next();
+				String email=s.next();
+				int id=Integer.parseInt(s.next());
+				int number=Integer.parseInt(s.next());
+			}
+		}
+	}
+}

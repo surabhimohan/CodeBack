@@ -1,0 +1,25 @@
+package test;
+import java.util.*;
+public class Main {
+	public static void main(String[] args) {
+		try(Scanner s=new Scanner(System.in);){
+			System.out.println("Menu:");
+			System.out.println("1.Add a new contact");
+			System.out.println("2.Search a contact");
+			System.out.println("choose from menu:");
+			int choice=s.nextInt();
+			while(choice<4){
+				System.out.println("Menu:");
+				System.out.println("1.Add a new contact");
+				System.out.println("2.Search a contact");
+				System.out.println("choose from menu:");
+				System.out.println("enter choice:");
+				s.nextInt();
+				switch(choice){
+				case 1:
+				}
+			}
+		}
+	}
+
+}

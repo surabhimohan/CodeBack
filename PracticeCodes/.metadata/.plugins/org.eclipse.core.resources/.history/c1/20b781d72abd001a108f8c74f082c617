@@ -1,0 +1,21 @@
+public class Main {
+
+	public static void main(String[] args) {
+		try(java.util.Scanner s=new java.util.Scanner(System.in);)
+		{
+		int n=s.nextInt();
+		int m=s.nextInt();
+		int i=1;
+		while(i<=10)
+		{
+			System.out.print(n+" ");
+			int sum=n+m;
+			n=m;
+			m=sum;
+			i++;
+		}
+		}
+	}
+
+}
+

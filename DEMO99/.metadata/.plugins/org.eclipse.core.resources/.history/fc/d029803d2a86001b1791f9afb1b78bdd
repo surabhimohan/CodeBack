@@ -1,0 +1,43 @@
+package test;
+import java.util.*;
+public class Program 
+{
+	String name,nickName,city,email;
+	int id,number;
+		
+	public Program()
+	{
+		this(" "," "," "," ",0,0);
+	}
+	public Program(String sName, String sNickName, String sCity,
+			String sEmail, int sId, int sNumber) 
+	{
+		name=sName;
+		nickName=sNickName;
+		city=sCity;
+		email=sEmail;
+		id=sId;
+		number=sNumber;
+	}
+	public static void main(String[] args)
+	{
+		try(Scanner s=new Scanner(System.in);)		
+		{
+			System.out.println("enter the number of students:");
+			int n=Integer.parseInt(s.nextLine());
+			Program p1=new Program();
+			Program p2=new Program();
+			Program p3=new Program();
+			Program p4=new Program();
+			Program p5=new Program();
+			Program p6=new Program();
+			p1.name=s.next();
+			p2.nickName=s.next();
+			p3.city=s.next();
+			p4.email=s.next();
+			p5.id=s.nextInt();
+			p6.number=s.nextInt();
+		}
+	}
+
+}

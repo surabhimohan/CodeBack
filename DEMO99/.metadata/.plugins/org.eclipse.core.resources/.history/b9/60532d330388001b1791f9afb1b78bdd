@@ -1,0 +1,65 @@
+package test;
+import java.util.Scanner;
+//import test.Program;
+public class Main {
+	public static void main(String[] args) 
+	{
+		//String query1="INSERT INTO Students(firstname,lastname,age) VALUES('Neha','Mohan',21)";
+		String query1="UPDATE Students SET firstname='Neharika' WHERE firstname='Neha'";
+		ContactsDB db=new ContactsDB();
+		db.executeQuery(query1);
+		db.listContacts();
+		db.CloseConnection();
+		try(Scanner s=new Scanner(System.in);)
+		{
+			boolean k=true;
+			while(k)
+			{
+			System.out.println("MENU:");
+			System.out.println("1.Add a new contact");
+			System.out.println("2.Search a contact");
+			System.out.println("3.Edit a contact");
+			System.out.println("4.List all contacts");
+			System.out.println("5.Delete a contact");
+			System.out.print("enter choice: ");
+			int choice=Integer.parseInt(s.nextLine());
+			switch(choice)
+			{
+			case 1:
+				System.out.println("--You opted to add a new contact-- ");
+				//Program p=new Program();
+				//p.validate();
+				break;
+			case 2:
+				System.out.println("--You opted to search a contact-- ");
+				//Program p2=new Program();
+				//p2.validate();
+				break;
+			case 3:
+				System.out.println("--You opted to edit a contact-- ");
+				//Program p3=new Program();
+				//p3.validate();
+				break;
+			case 4:
+				System.out.println("--You opted to list all contacts-- ");
+				//Program p4=new Program();
+				//p4.validate();
+				break;
+			case 5:
+				System.out.println("-You opted to delete a contact-- ");
+				//Program p5=new Program();
+				//p5.validate();
+				break;
+			case 6:
+				k=false;
+				System.out.println("__Invalid choice__!!");
+				break;	
+			}
+			}
+			//Program p=new Program();
+			//p.validate();
+		}
+		
+	}
+
+}

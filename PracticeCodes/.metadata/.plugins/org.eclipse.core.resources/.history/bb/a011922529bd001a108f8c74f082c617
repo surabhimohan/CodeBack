@@ -1,0 +1,17 @@
+public class Main {
+
+	public static void main(String[] args) {
+		java.util.Scanner s=new java.util.Scanner(System.in);
+		int n=s.nextInt();
+		int m=s.nextInt();
+		for(int i=1;i<=10;i++)
+		{
+			System.out.print(n+" ");
+			int sum=n+m;
+			n=m;
+			m=sum;
+		}
+		s.close();
+	}
+
+}

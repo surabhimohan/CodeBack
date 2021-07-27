@@ -1,0 +1,25 @@
+package test;
+import java.util.*;
+public class Program 
+{
+	//String name,nickName,city,email;
+	//int id,number;
+		
+	@SuppressWarnings("unused")
+	public static void main(String[] args)
+	{
+		String name;
+		try(Scanner s=new Scanner(System.in);)		
+		{
+			System.out.println("Enter Student's Name:");
+			if(s.hasNext("[A-Z a-z]*"))
+					{
+					//String name=s.next();
+					System.out.print(name=s.nextLine());
+					}
+			else
+				System.out.println("invalid input");
+		}
+	}
+
+}

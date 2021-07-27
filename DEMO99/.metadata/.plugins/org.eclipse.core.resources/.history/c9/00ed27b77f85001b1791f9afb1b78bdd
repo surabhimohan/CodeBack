@@ -1,0 +1,13 @@
+package test;
+
+public class Program 
+{
+	String name,nickName,city,email;
+	int id,number;
+		
+	public static void main(String[] args)
+	{
+		Program p=new Program();
+	}
+
+}

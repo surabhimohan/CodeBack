@@ -1,0 +1,18 @@
+INDEX VERSION 1.127+E:\PracticeCodes\.metadata\.plugins\org.eclipse.jdt.core
+2117517830.index
+563618784.index
+94333073.index
+2668449301.index
+1037645565.index
+2520379515.index
+2904179581.index
+2514289514.index
+2168537634.index
+1387455045.index
+947261651.index
+2011667822.index
+4288071203.index
+1128237810.index
+2587583613.index
+2796473732.index
+2569453153.index
